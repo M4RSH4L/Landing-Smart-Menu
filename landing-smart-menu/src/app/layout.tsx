@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import SmartMenuLogo from "@/components/SmartMenuLogo";
 import { site } from "@/lib/site";
 
 const geistSans = Geist({
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/favicon.ico.png",
+    shortcut: "/favicon.ico.png",
+    apple: "/favicon.ico.png",
+  },
   openGraph: {
     type: "website",
     locale: site.locale,
@@ -45,6 +50,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SmartMenuLogo />
         {children}
       </body>
     </html>
