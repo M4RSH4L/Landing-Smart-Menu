@@ -1,4 +1,5 @@
 import { JsonLd } from "@/components/seo/JsonLd";
+import InteractiveParticles from "@/components/ui/InteractiveParticles";
 
 import { DifferentiatorsSection } from "@/components/landing/DifferentiatorsSection";
 import { FaqSection, faqItems } from "@/components/landing/FaqSection";
@@ -20,7 +21,8 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      <InteractiveParticles className="fixed inset-0 -z-0 pointer-events-none" />
       <JsonLd data={buildLocalBusinessJsonLd()} />
       <JsonLd data={buildProductJsonLd()} />
       <JsonLd data={buildFaqJsonLd(faqItems)} />

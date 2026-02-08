@@ -30,7 +30,7 @@ export const faqItems: FaqItem[] = [
 
 export function FaqSection() {
   return (
-    <Section className="bg-zinc-50">
+    <Section className="bg-zinc-50 relative z-10">
       <div className="max-w-3xl">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
           Preguntas frecuentes

@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
+  /* COLORS: Brutalist Monochrome */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Brand Accents - REPLACED WITH MONOCHROME */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+
+  /* FONTS: Anton + Inter */
+  --font-display: var(--font-anton), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* BORDERS & RADIUS */
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Base - Pure White & Black */
+  --background: #FFFFFF;
+  --foreground: #000000;
+
+  /* Surfaces */
+  --surface: #F4F4F5;
+  /* Zinc 100 */
+  --surface-elevated: #E4E4E7;
+  /* Zinc 200 */
+
+  /* Muted */
+  --muted: #F4F4F5;
+  --muted-foreground: #71717A;
+  /* Zinc 500 */
+
+  /* Text Colors */
+  --text-primary: #000000;
+  --text-secondary: #52525B;
+  /* Zinc 600 */
+  --text-tertiary: #A1A1AA;
+
+  /* Brand Colors - STRICT BLACK */
+  --primary: #000000;
+  --primary-foreground: #FFFFFF;
+
+  /* UI Elements */
+  --secondary: #F4F4F5;
+  --secondary-foreground: #000000;
+
+  --accent: #000000;
+
+  /* Animations */
+  --ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
+  /* Text Rendering Optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilities for Glassmorphism & Micro-interactions */
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    border-color: rgba(37, 99, 235, 0.1);
+  }
+
+  .text-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }

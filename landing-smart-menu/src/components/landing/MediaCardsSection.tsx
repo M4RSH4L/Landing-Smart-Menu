@@ -35,7 +35,7 @@ const cards: MediaCard[] = [
     title: "Actualización instantánea desde Google Sheets",
     description:
       "Precios, descripciones, fotos y disponibilidad: todo editable sin depender de diseñadores ni ser Elon Musk.",
-    
+
     problemSolved:
       "Evita pérdidas por precios viejos y elimina fricción operativa en el día a día.",
     imageAlt: "Edición de menú desde Google Sheets",
@@ -119,7 +119,7 @@ function VideoEmbed({ title, url }: { title: string; url: string }) {
 
 export function MediaCardsSection() {
   return (
-    <Section className="bg-zinc-50">
+    <Section className="bg-zinc-50 relative z-10">
       <div className="max-w-3xl">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
           Cards multimedia: tu menú como experiencia
