@@ -44,7 +44,7 @@ export function FaqSection() {
         {faqItems.map((item) => (
           <details
             key={item.question}
-            className="group rounded-2xl border border-zinc-200 bg-white p-6"
+            className="group rounded-2xl border border-zinc-200 bg-zinc-50 p-6"
           >
             <summary className="cursor-pointer list-none text-base font-semibold text-zinc-950">
               {item.question}

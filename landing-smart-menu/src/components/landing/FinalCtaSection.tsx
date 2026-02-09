@@ -28,19 +28,19 @@ export function FinalCtaSection() {
             Qué necesitamos para cotizar
           </h3>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-zinc-200 bg-white p-4">
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
               <p className="text-sm font-semibold text-zinc-950">Tu rubro</p>
               <p className="mt-1 text-sm leading-6 text-zinc-600">
                 Restaurante, bar, parador, cervecería.
               </p>
             </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-4">
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
               <p className="text-sm font-semibold text-zinc-950">Ubicación</p>
               <p className="mt-1 text-sm leading-6 text-zinc-600">
                 La Plata, Buenos Aires o zona turística.
               </p>
             </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-4">
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
               <p className="text-sm font-semibold text-zinc-950">
                 Cantidad aproximada
               </p>
@@ -48,7 +48,7 @@ export function FinalCtaSection() {
                 Ítems de carta y categorías.
               </p>
             </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-4">
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
               <p className="text-sm font-semibold text-zinc-950">Objetivo</p>
               <p className="mt-1 text-sm leading-6 text-zinc-600">
                 Más ventas, SEO, estética premium o todo junto.

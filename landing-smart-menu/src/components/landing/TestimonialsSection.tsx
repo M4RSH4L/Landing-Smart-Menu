@@ -47,7 +47,7 @@ export function TestimonialsSection() {
         {testimonials.map((t) => (
           <figure
             key={`${t.name}-${t.business}`}
-            className="rounded-2xl border border-zinc-200 bg-white p-6"
+            className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6"
           >
             <blockquote className="text-sm leading-6 text-zinc-600">
               “{t.quote}”
